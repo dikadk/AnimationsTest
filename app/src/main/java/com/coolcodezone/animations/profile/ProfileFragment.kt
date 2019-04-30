@@ -32,13 +32,13 @@ class ProfileFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val navController = findNavController()
+        /*val navController = findNavController()
         viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticatorState->
             when(authenticatorState){
                 AUTHENTICATED -> showWelcomeMessage()
                 UNAUTHENTICATED -> navController.navigate(R.id.loginFragment)
             }
-        })
+        })*/
     }
 
     private fun showWelcomeMessage() {

@@ -17,10 +17,17 @@
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_objectAnimatorFragment"
+            app:destination="@id/objectAnimatorFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.coolcodezone.animations.profile.ProfileFragment"
         android:label="fragment_blank_fragment2"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/objectAnimatorFragment"
+        android:name="com.coolcodezone.animations.ObjectAnimatorFragment"
+        android:label="ObjectAnimatorFragment" />
 </navigation>

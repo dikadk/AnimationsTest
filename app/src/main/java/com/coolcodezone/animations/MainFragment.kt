@@ -27,5 +27,9 @@ class MainFragment : Fragment() {
             findNavController()
                 .navigate(R.id.action_mainFragment_to_profileFragment, null, null, extras)
         }
+
+        object_anim_btn.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_objectAnimatorFragment)
+        }
     }
 }
