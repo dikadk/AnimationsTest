@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    tools:context=".ObjectAnimatorFragment">
 
     <TextView
         android:id="@+id/slow_text"
@@ -25,6 +27,8 @@
         android:layout_marginTop="24dp"
         android:elevation="8dp"
         app:cardBackgroundColor="#009688"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slow_text">
@@ -33,9 +37,22 @@
             android:id="@+id/oh_snap_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:alpha="0"
             android:text="Oh Snap!!!"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/oh_snap_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="Waiting..."
             android:textColor="#FFFFFF"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -46,8 +63,8 @@
         android:id="@+id/submit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Repeat animations"
         android:alpha="0"
+        android:text="Repeat animations"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

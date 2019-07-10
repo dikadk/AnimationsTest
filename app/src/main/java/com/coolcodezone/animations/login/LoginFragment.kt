@@ -35,12 +35,6 @@ class LoginFragment : Fragment() {
 
         val navController = findNavController()
 
-        requireActivity().addOnBackPressedCallback(viewLifecycleOwner, OnBackPressedCallback {
-            viewModel.refuseAuthentication()
-            navController.popBackStack(R.id.mainFragment, false)
-            true
-        })
-
         viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
             when (authenticationState) {
                 AUTHENTICATED -> navController.popBackStack()

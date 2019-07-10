@@ -22,14 +22,22 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        val navController = findNavController();
         imageView.setOnClickListener {
             val extras = FragmentNavigatorExtras(imageView to "imageView")
-            findNavController()
-                .navigate(R.id.action_mainFragment_to_profileFragment, null, null, extras)
+            navController.navigate(R.id.action_mainFragment_to_profileFragment, null, null, extras)
         }
 
         object_anim_btn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_objectAnimatorFragment)
+            navController.navigate(R.id.action_mainFragment_to_objectAnimatorFragment)
+        }
+
+        phys_anim_btn.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_physicsAnimationFragment)
+        }
+
+        motionBtn.setOnClickListener {
+            navController.navigate(R.id.action_to_motionLayoutDemo)
         }
     }
 }

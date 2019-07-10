@@ -20,6 +20,12 @@
         <action
             android:id="@+id/action_mainFragment_to_objectAnimatorFragment"
             app:destination="@id/objectAnimatorFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_physicsAnimationFragment"
+            app:destination="@id/physicsAnimationFragment" />
+        <action
+            android:id="@+id/action_to_motionLayoutDemo"
+            app:destination="@id/motionLayoutDemo" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -29,5 +35,16 @@
     <fragment
         android:id="@+id/objectAnimatorFragment"
         android:name="com.coolcodezone.animations.ObjectAnimatorFragment"
-        android:label="ObjectAnimatorFragment" />
+        android:label="ObjectAnimatorFragment"
+        tools:layout="@layout/fragment_animator_test" />
+    <fragment
+        android:id="@+id/physicsAnimationFragment"
+        android:name="com.coolcodezone.animations.PhysicsAnimationFragment"
+        android:label="fragment_physics_animation"
+        tools:layout="@layout/fragment_physics_animation" />
+    <fragment
+        android:id="@+id/motionLayoutDemo"
+        android:name="com.coolcodezone.animations.MotionLayoutDemo"
+        android:label="fragment_motion_layout_demo"
+        tools:layout="@layout/fragment_motion_layout_demo_start" />
 </navigation>
